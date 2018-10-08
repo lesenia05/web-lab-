@@ -1,0 +1,27 @@
+
+.text {
+     padding-top: 30px;
+    padding-left:  70px;
+    padding-right: 70px;
+    padding-bottom: 70px;
+    font-size: 14pt;
+   }
+.dropdown:hover > .dropdown-menu { 
+    display: block; 
+
+ }
+ .date_of_post_in_fans{
+    font-size:16px;
+}
+hr{
+	border-color: black;
+}
+.news-container .news-item{
+	display: inline;
+}
+footer p{
+  position: relative;
+  bottom: 0;
+  margin-top: 100px;
+  text-align: center;
+}
