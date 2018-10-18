@@ -1,0 +1,21 @@
+CACHE MANIFEST
+
+CACHE:
+
+index.html
+error.html
+bootstrap-3.3.7-dist/js/bootstrap.js
+bootstrap-3.3.7-dist/css/bootstrap.css
+https://png.icons8.com/material-rounded/50/000000/running.png
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css
+
+NETWORK:
+*
+
+FALLBACK:
+
+news.html /error.html
+matches.html /error.html
+fans.html /error.html
+contacs.html /error.html
+admin.html /error.html
