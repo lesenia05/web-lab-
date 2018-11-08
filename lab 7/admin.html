@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html manifest="manifest.appcache">
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Run base Kyiv</title>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/5style.css">
   <link rel='shortcut icon' href='https://png.icons8.com/material-rounded/50/000000/running.png' type='image/x-icon'>
-    </script>
-     <script src="admin.js"></script>
+     <script src="function.js"></script>
 </head>
 
 <body>
@@ -33,7 +29,7 @@
                     <div class="collapse navbar-collapse" id="responsive-menu">
                          <ul class="nav navbar-nav">
     <li class="main"><a href="index.html">Main</a></li>
-    <li><a href="/news.html">News</a></li>
+    <li><a href="news.html">News</a></li>
     <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Matches<b class="caret"></b></a>
         <ul class="dropdown-menu">
       <li><a href="matches.html">All matches</a></li>
@@ -51,38 +47,34 @@
         </div>
     </div>
 </header>
-
-<content>
- <div class="container" style="margin-top: 80px">
-        <div class="fileupload fileupload-new " data-provides="fileupload">
-            <span class="btn btn-file btn-secondary"><span class="fileupload-new">Select image</span>
-                <input type="file"/></span>
-        </div>
-        <div class="col-lg-4" style="margin-bottom: 3; margin-top: 2">
-            <button type="submit" class="btn btn-primary">Add image</button>
-        </div>
-        </div>
-
-    <div class="container">
-        <form>
-            <div class="col-lg-4" style="padding-top: 20px">
-                <div>
-                    <input style="height: 50px; width: 100%;" placeholder="News title">
-                </div>
-                <div>
-                    <textarea name="comment" cols="40" style="height: 200px;width: 100%"
-                              placeholder="News text"></textarea>
-              </div>
-            <div class="col-lg-4">
-                <button class="btn btn-primary form-control input-lg" type="submit">Add news</button>
+<body>
+    
+  <div class="container" style="margin-top:50px; ">
+        <div class="main-text">
+             <div id="head">
+                <h1 id="header_content"><b>Додати новину</b></h1>
             </div>
-            </div>
-        </form>
-    </div>
-    </div>
-</content>
 
-<footer class="page-footer font-small" style="padding-top: 40px">
+            <div class="input_form"style="padding-top: 10px;">
+            <form class="col-md-4" id="addPicture">
+                <label id="file-input" for="formForFile">Оберіть зображення</label>
+                <input id="formForFile" type="file" class="form-control-file" required>
+            </form>
+            </div>
+
+            <div class="col-md-12">
+                <form id="newsForm" style="padding-top: 20px;">
+                    <textarea id="caption" type="text" class="form-control" placeholder="Заголовок" required></textarea>
+                    <br>
+                    <textarea id="text" class="form-control" rows="5" placeholder="Введіть текст новини" required></textarea>
+                    <br>                   
+                    <button id="submit-btn" type="submit" type="button" class="btn btn-primary">Надіслати</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <footer class="page-footer font-small">
     <div class="container text-center text-md-left ">
             <h5 class="text-uppercase">За детальною інформацією звертайтесь за посиланнями:</h5>
             <ul class="list-unstyled">
@@ -91,13 +83,48 @@
             </ul>
     </div>
   </footer>
-
-<div>
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="function.js"></script>
 </body>
-</div>
+
+
+ <!-- <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>jQuery('ul.nav > li').hover(function() { jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(); }, function() { jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(); })</script>
+
+
+<script type="text/javascript">
+  
+  let newss = [];
+  loadNewss();
+
+  document.getElementById('News_add').onclick = function(){
+    let commentTitle = document.getElementById('News_title');
+    let commentText = document.getElementById('News_text');
+
+    let news = {
+        Title : commentTitle.value,
+        Text : commentText.value,
+        
+    }
+
+  if (commentTitle.value =='') { alert("Заповніть поле заголовку");} 
+  else if (commentTitle.value == 0 ) { alert("Заголовок не може містити пробіли");} 
+  else if (commentText.value =='') { alert("Заповніть поле тексту новин");} 
+  else if (commentText.value == 0 ) { alert("Поле новин не може містити пробіли");} else {
+
+    commentTitle.value = '';
+    commentText.value = '';
+
+    newss.push(news);
+    saveNews();
+    showNewss();
+  };
+}
+  </script>-->
+    
 </body>
 </html>

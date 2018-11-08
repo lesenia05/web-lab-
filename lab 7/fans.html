@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html manifest="manifest.appcache">
+ <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <title>Run base Kyiv</title>
@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/5style.css">
   <link rel='shortcut icon' href='https://png.icons8.com/material-rounded/50/000000/running.png' type='image/x-icon'>
+  <script src="function.js"></script>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
 <content>
 <div class="container align-content-end " style="margin-top:80px">
         <div class="row">
-          <h3><b>Звернення фанів</b></h3>
+          <h3 style="text-align:center;"><b>Звернення фанів</b></h3>
           
             <div class="card col-sm-12 col-lg-12 mt-3" >
                 <div class="card-body">
@@ -61,7 +61,7 @@
                     <p class="card-text">Бажаємо всім хто пов'язаний зі спортом, успіхів, удачі і міцного здоров'я. Нехай заняття спортом допомагають вам у житті, а улюблене хобі приносить тільки гарний настрій. Бажаємо вам нових перемог і досягнень, нехай на вашому життєвому шляху буде менше перешкод, а якщо навіть вони і зустрічаються, бажаємо з честю і гідністю впоратися з ними.</p>
                     <div class="row">
                         <div class="date_of_post_in_fans col-md-3">10.09.2018, 12:31</div>
-                        <div class="nickname_in_fans col-md-3 c"><b>Runner1</b></div>
+                        <div class="nickname_in_fans " style="text-align: right;"><b>Runner1</b></div>
                         <hr>
                     </div>
                 </div>
@@ -73,29 +73,30 @@
                     <p class="card-text">Я спостерігав як відбувається марафон, і наступного року хочу приймати учась.Такі заходи долучають людей до спорту і здорового способу життя. Безумовно, це позитивно впливає на суспільство в цілому.</p>
                     <div class="row">
                         <div class="date_of_post_in_fans col-md-3">01.10.2018, 11:27</div>
-                        <div class="nickname_in_fans col-md-3 "><b>Runner2</b></div>
+                        <div class="nickname_in_fans" style="text-align: right;"><b>Runner2</b></div>
                         <hr>
                     </div>
                 </div>
             </div>
-
-            <form>
-              <div class="container">
-                <div class="row">
-                   <div class="col-lg-4" style="padding-top: 30px">
-                    <div >
-                        <textarea class="form-control col-lg-4 col-md-4" placeholder="Your message.."></textarea>
-                    </div>
-                    <div    >
-                        <button type="submit" class="btn btn-primary  btn-md ">Send</button>
-                    </div>
-                </div>
-            </form>       
+    
+        <div class="container" id="comment-field">             
         </div>
-    </div>
+        <br><br>
+        <div class="container">
+            <div class="row">
+        
+            <div class="col-md-9">
+                <textarea class="form-control" rows="5" placeholder="Написати звернення..." id="comment-body"></textarea>
+            </div>
+                    
+            <div class="col-md-3">
+                <br><button type="button" class="btn btn-default pull-left" id="comment-add" >Опублікувати</button>
+            </div>
 
+        </div>
+    </div>   
+ </div>   
 </content>
-
 
 <footer class="page-footer font-small">
     <div class="container text-center text-md-left ">
@@ -106,32 +107,35 @@
             </ul>
     </div>
   </footer>
-<div>
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+let comments = [];
+loadComments();
 
+document.getElementById('comment-add').onclick = function(){
+      
+    let commentBody = document.getElementById('comment-body');
 
-<script>
-function sendForm(e){
-     
-    // получаем значение поля key
-    var keyBox = document.search.key;
-    var val = keyBox.value;
-    if(val.length>5){
-        alert("Недопустимая длина строки");
-        e.preventDefault();
-    }   
-    else
-        alert("Отправка разрешена");
+    let comment = {
+        
+        body : commentBody.value,
+        time : Math.floor(Date.now() / 1000)
+    }
+    if (commentBody.value =='') { alert("Заповніть поле коментаря");} 
+    else if (commentBody.value == 0 ) { alert("Коментар не може містити пробіли");} else { 
+ 
+    commentBody.value = '';
+
+    comments.push(comment);
+    saveComments();
+    showComments();
+  
+};
 }
- 
-var sendButton = document.search.send;
-sendButton.addEventListener("click", sendForm);
-</script>
+    </script>
+    <script>jQuery('ul.nav > li').hover(function() { jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(); }, function() { jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(); })</script>
 
-</body>
-</div>
 </body>
 </html>
