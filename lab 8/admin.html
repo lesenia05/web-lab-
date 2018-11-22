@@ -1,0 +1,101 @@
+ <!DOCTYPE html>
+ <html manifest="manifest.appcache">
+<html lang="en">
+
+<head>
+  <title>Run base Kyiv</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+  <link rel='shortcut icon' href='https://png.icons8.com/material-rounded/50/000000/running.png' type='image/x-icon'>
+     <script src="function.js"></script>
+</head>
+
+<body>
+<header>
+
+<div class="container">
+        <div class="row">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu" >
+                    <span class="sr-only">Відкрити навігацію</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                   </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="responsive-menu">
+                         <ul class="nav navbar-nav">
+    <li class="main"><a href="index.html">Main</a></li>
+    <li><a href="news.html">News</a></li>
+    <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Matches<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+      <li><a href="matches.html">All matches</a></li>
+      <li><a href="matches.html">Victories</a></li>
+    </ul>
+    </li>
+    <li><a href="fans.html">Fans</a></li>
+    <li><a href="contacts.html">Contacts</a></li>
+    <li><a href="admin.html">Admin</a></li>
+    <li class="logo"><a href="">LOGO</a></li>
+   </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+
+<content class="row">
+      <h2 style="margin-top: 60px; text-align: center"; >Додати новини</h2>
+      <div style="padding-top: 20px">
+        <div class="container">
+            <form>
+                <div id="addPicture" class="col-lg-8">                  
+                  <label id="file-input" for="formForFile">Виберіть зображення</label>
+                    <input id="formForFile" type="file" class="btn btn-primarry form-control">
+                </div>
+            </form>
+        </div>
+      </div>
+      <div style="padding-top: 20px">
+        <div class="container">
+            <form id="newsForm">
+              <div class="col-lg-8">
+                <input id="caption" style="height: 50px;width: 100%" placeholder="Заповніть поле заголовка...">
+                <textarea id="text" name="comment" cols="40" rows="3" style="height: 200px;width: 100%" placeholder="Заповніть поле новини..."></textarea>
+                </div>
+            </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="col-lg-8">
+        <button id="sub" class="btn btn-primarry btn-block">Відправити</button>
+      </div>
+    </div>
+    </content>
+  
+
+    <footer class="page-footer font-small">
+    <div class="container text-center text-md-left ">
+            <h5 class="text-uppercase">За детальною інформацією звертайтесь за посиланнями:</h5>
+            <ul class="list-unstyled">
+              <li><a href="#!">Link 1</a></li>
+              <li><a href="#!">Link 2</a></li>
+            </ul>
+    </div>
+  </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="function.js"></script>
+
+    
+</body>
+</html>

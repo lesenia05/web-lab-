@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+CACHE:
+/fans.html
+/index.html
+/news.html
+
+NETWORK:
+*
+
+FALLBACK:
+admin.html /Error.html
