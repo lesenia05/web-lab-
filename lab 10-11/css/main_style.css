@@ -1,0 +1,81 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color:#FFFFFF;
+}
+.imgg{
+ height: 46px;
+ width: 60px;
+}
+.img{
+ width: 100%;
+}
+.bottom{
+   width: 90%;
+  padding-top: 46px;
+}
+
+
+.top{
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-name: fadeIn;
+   width: 100%;
+  padding-top: 46px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.text {
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-name: slidein;
+
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 40px;
+  font-size:15;
+  color:#333;
+
+}
+@keyframes slidein {
+  from {
+  opacity: 0;
+    margin-left:200%;
+    width:100%;
+  }
+
+  to {
+   opacity: 1
+   margin-left:200px;
+    width:1040;
+  }
+}
+h1{
+  color:#000000;
+}
+h2{
+  color:#000000
+} footer{
+
+position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-top:0px;
+  height: 100px;
+  align:center;
+  background-color:#FFFFFF
+}
+.foooter{
+
+  color:#FFFFFF;
+  align:center;
+  margin-bottom: 15px;
+  padding-top: 35px;
+}

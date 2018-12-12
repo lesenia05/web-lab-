@@ -1,0 +1,35 @@
+CACHE MANIFEST
+
+
+
+contacts.html
+fans.html
+news.html
+index.html
+
+css/admin_style.css
+css/contacts_style.css
+css/fans_style.css
+css/calendar_style.css
+css/news_style.css
+css/main_style.css
+
+img/logo.png
+img/main_1.img
+img/main_2.img
+img/trainer_22.img
+img/trainer_3.img
+img/trainer_1.img
+img/logo.png
+img/image.png
+
+https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css
+https://code.jquery.com/jquery-3.3.1.slim.min.js
+https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js
+https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js
+
+FALLBACK:
+. error.html
+
+NETWORK:
+*

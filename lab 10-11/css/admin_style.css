@@ -1,0 +1,49 @@
+
+
+body{
+  margin-top: 60px;
+
+  padding: 0;
+  background-color:#FFFFFF;
+}
+.imgg{
+ height: 46px;
+ width: 60px;
+}
+h1{
+  text-align: center;
+}
+.iadd{
+  width: 100%;
+  height: 350px;
+}
+
+footer{
+
+position: relative;
+  bottom: 0;
+  width: 100%;
+  padding-top:0px;
+  height: 100px;
+  align:center;
+  background-color:#FFFFFF
+}
+.foooter{
+
+  color:#FFFFFF;
+  align:center;
+  margin-bottom: 15px;
+  padding-top: 35px;
+}
+@media (max-width: 992px) {
+      footer  {
+        margin-top: 20px;
+        position: relative;
+          bottom: 0;
+
+   }
+   body{
+     margin-top: 70px;
+   }
+
+}

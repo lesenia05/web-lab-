@@ -1,0 +1,41 @@
+
+body{
+  margin-top: 200px;
+
+  padding: 0;
+  background-color:#FFFFFF;
+}
+@media (min-width: 992px) {
+      .contennt  {
+      padding-left: 10%;
+     width: 90%;
+
+   }
+}
+.imgg{
+ height: 46px;
+ width: 60px;
+}
+
+.title{
+  padding-top: 200px;
+}
+h1{
+ text-align: center;
+}
+footer{
+
+position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top:0px;
+  height: 100px;
+  background-color:#FFFFFF;
+}
+.foooter{
+
+  color:#FFFFFF;
+  align:center;
+  margin-bottom: 15px;
+  padding-top: 35px;
+}
